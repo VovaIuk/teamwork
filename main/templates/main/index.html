@@ -16,36 +16,28 @@
             <li><a href="#">Настройки</a></li>
         </ul>
         <hr class="m-col-sep">
+        {% for column in columns %}
         <div class="m-column">
             <hr>
             <center>
-              <h2>Сделать</h2>
+              <h3>{{column.title}}</h3>
             </center>
-                <hr>
-                <div class="scrollable">
-                <a href="#" style="text-decoration: none;">
-                    <div class="card" style="width: 280px;">
+            <hr>
+            <div class="scrollable">
+            {% for card in column.cards %}
+            <a href="{% url "main:card" card.slug %}" style="text-decoration: none;">
+                <div class="card" style="width: 280px;">
                     <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        <h5 class="card-title">{{card.name}}</h5>
+                        <p class="card-text">{{card.description}}</p>
                     </div>
-                    </div>
-                </a>
-                <a href="#" style="text-decoration: none;">
-                    <div class="card" style="width: 280px;">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                    </div>
-                </a>
                 </div>
+            </a>
+            {% endfor %}
+            </div>
         </div>
         <hr class="m-col-sep">
-        <div class="m-column">колонка 2</div>
-        <hr class="m-col-sep">
-        <div class="m-column">колонка 3</div>
-        <hr class="m-col-sep">
+        {% endfor %}
     </div>
 
     <link rel="stylesheet" href="{% static "main/style.css" %}">
