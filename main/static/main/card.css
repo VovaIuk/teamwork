@@ -1,0 +1,66 @@
+body{
+    margin: 0;
+    display: flex;
+    height: 100vh; 
+}
+
+.half{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.divider {
+    width: 1px;
+    background-color: black; 
+    height: 95vh;
+}
+
+.scrollable{
+    overflow-y: auto;
+    max-height: 80vh;
+    display: flex;
+  }
+  
+.scrollable::-webkit-scrollbar {
+    display: none;
+}
+
+.form-answer{
+    height: 80%;
+    width: 70%;
+}
+
+.card-answer{
+    height: 100%;
+    width: 100%;
+}
+
+.custom-textarea {
+    border: none; /* Убираем границы */
+    resize: none; /* Запрет на изменение размера */
+    width: 100%;
+    flex: 1;/* Ширина на 100% */
+    padding: 10px; /* Отступы внутри текстовой области */
+    font-size: 16px; /* Размер шрифта */
+    overflow-y: auto; /* Вертикальный скролл */
+}
+
+/* Стили для скролла */
+.custom-textarea::-webkit-scrollbar {
+    width: 12px; /* Ширина скролла */
+}
+
+.custom-textarea::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Цвет фона скролла */
+}
+
+.custom-textarea::-webkit-scrollbar-thumb {
+    background: #888; /* Цвет ползунка скролла */
+    border-radius: 10px; /* Закругление углов ползунка */
+}
+
+.custom-textarea::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Цвет ползунка при наведении */
+}
