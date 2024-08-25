@@ -38,13 +38,20 @@ body{
 }
 
 .custom-textarea {
-    border: none; /* Убираем границы */
     resize: none; /* Запрет на изменение размера */
     width: 100%;
     flex: 1;/* Ширина на 100% */
     padding: 10px; /* Отступы внутри текстовой области */
-    font-size: 16px; /* Размер шрифта */
+    font-size: 18px; /* Размер шрифта */
     overflow-y: auto; /* Вертикальный скролл */
+    transition: border-color 0.3s ease; /* Плавный переход */
+    border-color: white;
+    border-radius: 1%;
+}
+
+.custom-textarea:focus{
+    border-color: grey;
+    outline: none;
 }
 
 /* Стили для скролла */
